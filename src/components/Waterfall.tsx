@@ -1,6 +1,8 @@
+import { imgs } from "@/mock/mock"
+import "@/assets/style/waterfall.module.scss";
 function Waterfall(){
 	return <div>
-		测试瀑布流1111111111
+		{imgs}
 	</div>
 }
 

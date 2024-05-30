@@ -1,4 +1,4 @@
-import Waterfall from "./Waterfall.tsx"
+import Waterfall from "@/components/Waterfall.tsx";
 
 function App() {
   
