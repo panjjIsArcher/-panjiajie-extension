@@ -11,8 +11,10 @@
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    "noEmit": false, /* 允许生成 d.ts 文件*/
     "jsx": "react-jsx",
+		"declaration": true, 
+		"emitDeclarationOnly": true, 
 
     /* Linting */
     "strict": true,

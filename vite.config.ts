@@ -9,4 +9,19 @@ export default defineConfig({
       "@": resolve(__dirname, "src"),
     },
   },
+  build: {
+    lib: {
+      entry: resolve(__dirname, "src/components/Waterfall.tsx"),
+      name: "Waterfall",
+      fileName: (format) => `waterfall.${format}.js`,
+    },
+    rollupOptions: {
+      external: ["react"],
+      output: {
+        globals: {
+          react: "React",
+        },
+      },
+    },
+  },
 });
