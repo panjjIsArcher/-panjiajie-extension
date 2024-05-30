@@ -1,11 +1,9 @@
-
+import Waterfall from "./Waterfall.tsx"
 
 function App() {
   
   return (
-    <>
-     测试瀑布流
-    </>
+    <Waterfall/>
   )
 }
 
