@@ -1,5 +1,5 @@
 import Waterfall from "@/components/Waterfall.tsx";
-import { imgs } from "@/mock/mock";
+
 function App() {
   return (
     <Waterfall column={3} gap={20 + "px"}>

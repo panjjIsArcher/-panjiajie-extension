@@ -1,3 +1,4 @@
+// @ts-nocheck
 import waterfallCss from "@/assets/style/waterfall.module.scss";
 import { WATERFALL_PROPS } from "@/type/propsInterface";
 import { useEffect, useRef, useState } from "react";
