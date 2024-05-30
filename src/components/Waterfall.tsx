@@ -1,11 +1,31 @@
-
 import waterfallCss from "@/assets/style/waterfall.module.scss";
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react";
-function Waterfall(props: { children: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }){
-	console.info(props.children)
-	return <div className={waterfallCss.container}>
-		{props.children}
-	</div>
+import { WATERFALL_PROPS } from "@/type/propsInterface";
+
+function Waterfall(props: WATERFALL_PROPS) {
+  const { children, column } = props;
+
+  const itemWidth = () => {
+    const container = document.querySelector("#waterfall");
+    return container.clientWidth / children.length;
+  };
+
+  const createLi = (children: any) => {
+    return (
+      children?.map((item: any, index: number) => {
+        return (
+          <li key={item?.id ?? index} className={waterfallCss.li}>
+            {item}
+          </li>
+        );
+      }) ?? []
+    );
+  };
+
+  return (
+    <ul className={waterfallCss.container} id="waterfall">
+      {createLi(children)}
+    </ul>
+  );
 }
 
-export default Waterfall
+export default Waterfall;
