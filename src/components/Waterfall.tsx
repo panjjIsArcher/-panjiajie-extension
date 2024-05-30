@@ -1,8 +1,10 @@
-import { imgs } from "@/mock/mock"
-import "@/assets/style/waterfall.module.scss";
-function Waterfall(){
-	return <div>
-		{imgs}
+
+import waterfallCss from "@/assets/style/waterfall.module.scss";
+import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react";
+function Waterfall(props: { children: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }){
+	console.info(props.children)
+	return <div className={waterfallCss.container}>
+		{props.children}
 	</div>
 }
 
